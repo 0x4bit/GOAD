@@ -12,18 +12,18 @@ source "proxmox-iso" "windows" {
   additional_iso_files {
     device           = "sata3"
     iso_checksum     = "${var.autounattend_checksum}"
-    iso_storage_pool = "local"
+    iso_storage_pool = "${var.proxmox_iso_storage}"
     iso_url          = "${var.autounattend_iso}"
     unmount          = true
   }
   additional_iso_files {
     device   = "sata4"
-    iso_file = "local:iso/virtio-win.iso"
+    iso_file = "${var.proxmox_iso_storage}:iso/virtio-win.iso"
     unmount  = true
   }
   additional_iso_files {
     device   = "sata5"
-    iso_file = "local:iso/scripts_withcloudinit.iso"
+    iso_file = "${var.proxmox_iso_storage}:iso/scripts_withcloudinit.iso"
     unmount  = true
   }
   cloud_init              = true
