@@ -61,6 +61,7 @@ source "proxmox-iso" "windows" {
   winrm_use_ssl        = true
   winrm_username       = "${var.winrm_username}"
   task_timeout         = "40m"
+  vm_id                = "${var.id}"
 }
 
 build {
@@ -75,7 +76,7 @@ build {
   provisioner "powershell" {
     elevated_password = "vagrant"
     elevated_user     = "vagrant"
-    pause_before      = "1m0s"
+    pause_before      = "2m0s"
     scripts           = ["${path.root}/scripts/sysprep/cloudbase-init-p2.ps1"]
   }
 
