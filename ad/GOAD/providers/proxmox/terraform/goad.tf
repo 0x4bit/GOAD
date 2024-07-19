@@ -117,7 +117,6 @@ resource "proxmox_virtual_environment_vm" "bgp" {
     network_device {
       bridge  = var.network_bridge
       model   = var.network_model
-      vlan_id = var.network_vlan
     }
 
     lifecycle {
