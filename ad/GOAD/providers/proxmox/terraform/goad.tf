@@ -13,63 +13,63 @@ variable "vm_config" {
   default = {
     "dc01" = {
       name               = "GOAD-DC01"
-      desc               = "DC01 - windows server 2019 - 192.168.10.10"
+      desc               = "DC01 - windows server 2019 - 172.16.0.10"
       cores              = 2
       memory             = 3096
       clone              = "WinServer2019_x64"
-      dns                = "192.168.10.1"
-      ip                 = "192.168.10.10/24"
-      gateway            = "192.168.10.1"
+      dns                = "172.16.0.2"
+      ip                 = "172.16.0.10/24"
+      gateway            = "172.16.0.2"
     }
     "dc02" = {
       name               = "GOAD-DC02"
-      desc               = "DC02 - windows server 2019 - 192.168.10.11"
+      desc               = "DC02 - windows server 2019 - 172.16.0.11"
       cores              = 2
       memory             = 3096
       clone              = "WinServer2019_x64"
-      dns                = "192.168.10.1"
-      ip                 = "192.168.10.11/24"
-      gateway            = "192.168.10.1"
+      dns                = "172.16.0.2"
+      ip                 = "172.16.0.11/24"
+      gateway            = "172.16.0.2"
     }
     "dc03" = {
       name               = "GOAD-DC03"
-      desc               = "DC03 - windows server 2016 - 192.168.10.12"
+      desc               = "DC03 - windows server 2016 - 172.16.0.12"
       cores              = 2
       memory             = 3096
       clone              = "WinServer2016_x64"
-      dns                = "192.168.10.1"
-      ip                 = "192.168.10.12/24"
-      gateway            = "192.168.10.1"
+      dns                = "172.16.0.2"
+      ip                 = "172.16.0.12/24"
+      gateway            = "172.16.0.2"
     }
     "srv02" = {
       name               = "GOAD-SRV02"
-      desc               = "SRV02 - windows server 2019 - 192.168.10.22"
+      desc               = "SRV02 - windows server 2019 - 172.16.0.22"
       cores              = 2
       memory             = 4096
       clone              = "WinServer2019_x64"
-      dns                = "192.168.10.1"
-      ip                 = "192.168.10.22/24"
-      gateway            = "192.168.10.1"
+      dns                = "172.16.0.2"
+      ip                 = "172.16.0.22/24"
+      gateway            = "172.16.0.2"
     }
     "srv03" = {
       name               = "GOAD-SRV03"
-      desc               = "SRV03 - windows server 2016 - 192.168.10.23"
+      desc               = "SRV03 - windows server 2016 - 172.16.0.23"
       cores              = 2
       memory             = 4096
       clone              = "WinServer2016_x64"
-      dns                = "192.168.10.1"
-      ip                 = "192.168.10.23/24"
-      gateway            = "192.168.10.1"
+      dns                = "172.16.0.2"
+      ip                 = "172.16.0.23/24"
+      gateway            = "172.16.0.2"
     }
     #"ws01" = {
     #  name               = "GOAD-WS01"
-    #  desc               = "WS01 - windows 10 - 192.168.10.30"
+    #  desc               = "WS01 - windows 10 - 172.16.0.30"
     #  cores              = 2
     #  memory             = 4096
     #  clone              = "Windows10_22h2_x64"
-    #  dns                = "192.168.10.1"
-    #  ip                 = "192.168.10.30/24"
-    #  gateway            = "192.168.10.1"
+    #  dns                = "172.16.0.2"
+    #  ip                 = "172.16.0.30/24"
+    #  gateway            = "172.16.0.2"
     #}
   }
 }
