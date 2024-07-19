@@ -33,11 +33,11 @@ function Check-ContinueRestartOrEnd() {
       }
       elseif ($script:Cycles -gt $global:MaxCycles) {
         LogWrite "Exceeded Cycle Count - Stopping"
-        & "G:\ConfigureRemotingForAnsible.ps1"
+        & "E:\ConfigureRemotingForAnsible.ps1"
       }
       else {
         LogWrite "Done Installing Windows Updates"
-        & "G:\ConfigureRemotingForAnsible.ps1"
+        & "E:\ConfigureRemotingForAnsible.ps1"
       }
     }
     1 {
@@ -138,7 +138,7 @@ function Install-WindowsUpdates()
     LogWrite 'No updates available to install...'
     $global:MoreUpdates = 0
     $global:RestartRequired = 0
-    & "G:\ConfigureRemotingForAnsible.ps1"
+    & "E:\ConfigureRemotingForAnsible.ps1"
     break
   }
 

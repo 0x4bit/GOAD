@@ -21,11 +21,6 @@ source "proxmox-iso" "windows" {
     iso_file = "${var.proxmox_iso_storage}:iso/virtio-win.iso"
     unmount  = true
   }
-  additional_iso_files {
-    device   = "sata5"
-    iso_file = "${var.proxmox_iso_storage}:iso/scripts_withcloudinit.iso"
-    unmount  = true
-  }
   cloud_init              = true
   cloud_init_storage_pool = "${var.proxmox_iso_storage}"
   communicator            = "winrm"
@@ -69,7 +64,7 @@ build {
   provisioner "powershell" {
     elevated_password = "vagrant"
     elevated_user     = "vagrant"
-    scripts           = ["${path.root}/scripts/sysprep/cloudbase-init.ps1"]
+    scripts           = ["${path.root}/scripts/sysprep/cloudbase-init-p1.ps1"]
   }
 
   provisioner "powershell" {
