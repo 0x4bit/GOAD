@@ -2,6 +2,7 @@
 
 cd $(dirname "$0")/ansible
 
-export ANSIBLE_COMMAND="ansible-playbook -i $(dirname "$0")/ad/GOAD/data/inventory -i $(dirname "$0")/ad/GOAD/providers/proxmox/inventory"
+export LAB="GOAD"
+export PROVIDER="proxmox"
 
-$(dirname "$0")/scripts/provisioning.sh
+../scripts/provisioning.sh
